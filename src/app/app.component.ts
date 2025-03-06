@@ -1,16 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [
+    FormsModule,
+    RouterOutlet
+  ],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Started Angular by Anshik';
   imgSrc = "./assets/bridgelabz.jpg";  
-  url = "https://www.bridgelabz.com";  
+  url = "https://www.bridgelabz.com"; 
+  userName: string = "";
+  
+  ngOnInit() {
+    this.title = "Hello from Bridgelabz.";
+  }
 
   onClick($event: any) {
     console.log("Save button is clicked!", $event);
