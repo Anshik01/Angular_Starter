@@ -8,5 +8,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Started Angular by Anshik';    
+  title = 'Started Angular by Anshik';
+  imgSrc = "./assets/bridgelabz.jpg";    
 }
